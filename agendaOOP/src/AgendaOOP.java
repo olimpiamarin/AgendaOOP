@@ -163,8 +163,14 @@ public class AgendaOOP {
     //CREARE NUME NOU IN AGENDA
     public static void creare(String nume, String telefon) {
         Contact p = new Contact(nume, telefon);
-        agenda[index] = p;
-        index++;
+        if(index<agenda.length) {
+            agenda[index] = p;
+            index++;
+        }
+        else{
+            System.out.println();
+            System.out.println("Ne pare rau, dar agenda este plina deja!");
+        }
     }
 
     //CREARE NUME NOU FARA DUPLICAT
@@ -191,6 +197,7 @@ public class AgendaOOP {
         }
         else {
             printConsole("Numele introdus exista deja.");
+            System.out.println();
         }
     }
 
@@ -214,7 +221,7 @@ public class AgendaOOP {
         for (int i = 0; i < agenda.length; i++) {
             if (agenda[i]!=null && nume.equals(agenda[i].getNume())) {
                 r = i+1;
-                printConsole("Numele " + nume + " a fost gasit pe pozitia " + r); //nu are break, deci le va afisa pe toate, daca se repeta
+                printConsole("Numele " + nume + " a fost gasit pe pozitia " + r);
             }
         }
         if (r==-1){System.out.println("Numele " + nume + " nu a fost gasit in agenda!");}
