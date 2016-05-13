@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.util.Scanner;
 
 /**
- * Created by Manu on 18-Apr-16.
+ * Created by Pia on 14.05.16
  */
 public class AgendaOOP {
     /* utility methods for INPUT/OUTPUT using a GUI or Console, please leave them as they are */
@@ -92,7 +92,7 @@ public class AgendaOOP {
         do {
             printConsole("Meniul principal:"); //l-am facut pe orizontala pentru ca imi ocupa prea mult din consola
             printConsole("1-Afisarea sirului de nume / 2-Creare nume / 3-Cautare nume / 4-Modificare nume / 5-Stergere nume");
-            printConsole("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            printConsole("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
             opt = readIntConsole("Alegeti optiunea dorita:");
             System.out.println();
